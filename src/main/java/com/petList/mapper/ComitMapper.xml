@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--ComitMapper-->
+<mapper namespace="com.petList.mapper.ComitMapper">
+    <!--搜尋全部Comit-->
+    <select id="SelectAllComit" resultType="Comit">
+        select * from petlist.comit
+    </select>
+    <!--刪除-->
+    <delete id="DeleteComitById" parameterType="_int">
+        delete from petlist.comit where Id=#{id}
+    </delete>
+    <!--上傳貓-->
+    <insert id="UpdateCat" parameterType="CatFrom">
+        INSERT INTO `petlist`.`catfrom` (`name`,`gender`,`locantion`,`date`,`phone`,`Prove`)
+        values (#{name}, #{gender}, #{locantion},#{date},#{phone},#{Prove})
+    </insert>
+    <!--上傳狗-->
+    <insert id="UpdateDog" parameterType="DogFrom">
+        INSERT INTO `petlist`.`dogfrom` (`name`,`gender`,`locantion`,`date`,`phone`,`Prove`)
+        values (#{name}, #{gender}, #{locantion},#{date},#{phone},#{Prove})
+    </insert>
+</mapper>

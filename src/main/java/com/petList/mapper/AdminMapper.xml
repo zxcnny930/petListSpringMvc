@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--AdminMapper-->
+<mapper namespace="com.petList.mapper.AdminMapper">
+<!--搜尋全部-->
+    <select id="CheckAdmin" resultType="Admin">
+        select *from admin
+    </select>
+    <select id="Check" resultType="Admin">
+        select *from admin
+    </select>
+</mapper>
